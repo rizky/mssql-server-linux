@@ -1,10 +1,12 @@
 
 ###Docker
+eval "$(docker-machine env default)"
 docker build -t rizkyario/mssql-server-linux .
 docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Superstr*ng-p4ssword' -p 1433:1433 --name mssql -d rizkyario/mssql-server-linux
 
 ###Use sqlcmd
 /opt/mssql-tools/bin/sqlcmd
+
 
 ###Run docker image
 
