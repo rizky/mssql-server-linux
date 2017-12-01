@@ -1,18 +1,24 @@
 
-###Docker
+### Notes
+
+This project is discontinues as Microsoft already handle this natively, https://hub.docker.com/r/microsoft/mssql-server-linux/
+
+### Docker
+
 eval "$(docker-machine env default)"
 docker build -t rizkyario/mssql-server-linux .
 docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Superstr*ng-p4ssword' -p 1433:1433 --name mssql -d rizkyario/mssql-server-linux
 
-###Use sqlcmd
+### Use sqlcmd
+
 /opt/mssql-tools/bin/sqlcmd
 
 
-###Run docker image
+### Run docker image
 
 `docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Superstr*ng-p4ssword'  -p 1433:1433 --name mssql -d rizkyario/mssql-server-linux`
 
-###Initiate database
+### Initiate database
 
 `cat init-profile-db.sql | docker exec -i mssql sqlcmd -S localhost -U sa -P Superstr*ng-p4ssword -t 30`
 
