@@ -1,7 +1,7 @@
 
 ### Notes
 
-This project is discontinues as Microsoft already handle this natively, https://hub.docker.com/r/microsoft/mssql-server-linux/
+This project is discontinued since Microsoft has already handled this natively, https://hub.docker.com/r/microsoft/mssql-server-linux/
 
 ### Docker
 
